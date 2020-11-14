@@ -42,3 +42,10 @@ command2
 
 
 One sample test file test.in is attached alongside
+
+```Allocate Size```
+
+```Free Address```
+
+This is the format for commands required
+
