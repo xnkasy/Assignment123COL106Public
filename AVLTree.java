@@ -2,12 +2,18 @@
 // Binary Search Tree
 
 public class AVLTree extends BSTree {
-        
+    
+    private AVLTree left, right;     // Children. 
+    private AVLTree parent;          // Parent pointer. 
     private int height;  // The height of the subtree
         
     public AVLTree() { 
         super();
-        this.height = -1;
+        // This acts as a sentinel root node
+        // How to identify a sentinel node: A node with parent == null is SENTINEL NODE
+        // The actual tree starts from one of the child of the sentinel node !.
+        // CONVENTION: Assume right child of the sentinel node holds the actual root! and left child will always be null.
+        
     }
 
     public AVLTree(int address, int size, int key) { 

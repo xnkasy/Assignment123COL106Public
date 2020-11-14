@@ -35,15 +35,26 @@ public abstract class DynamicMem {
 
         Memory = new byte[size];
         
-        allocBlk = null;    // Initially the allocated list is empty
         type = dict_type;
 
-        if (type == 1) 
-             freeBlk = new A1List(0, size, size);   // Initially free list has only one block with all the memory
-        else if (type == 2) 
-            freeBlk = new BSTree(0, size, size); 
-        else 
-            freeBlk = new AVLTree(0, size, size);
+        if (type == 1){
+            freeBlk = new A1List();   // Initiates the sentinel nodes. (Tail and head)
+            allocBlk = new A1List();   
+            freeBlk.Insert(0, size, size);
+            // Initially free list has only one block with all the memory
+        }
+        else if (type == 2){
+            freeBlk = new BSTree(); // Initiates the sentinel root node.
+            allocBlk = new BSTree();
+            freeBlk.Insert(0, size, size);
+            // Initially free list has only one block with all the memory
+        }
+        else{
+            freeBlk = new AVLTree();
+            allocBlk = new AVLTree();
+            freeBlk.Insert(0, size, size);
+            // Initially free list has only one block with all the memory
+        } 
     }
 
    public abstract int Allocate(int blockSize);

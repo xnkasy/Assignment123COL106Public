@@ -26,7 +26,7 @@ public class A1DynamicMem extends DynamicMem {
     public int Allocate(int blockSize) {
         return -1;
     } 
-
+    
     public int Free(int startAddr) {
         return -1;
     }

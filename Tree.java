@@ -1,13 +1,15 @@
 // Class: Implementation of Dictionary using Binary Search Tree
 // The Dictionary now becomes an ordered dictionary, ordered by key
 
+// NOTE: A sentinel root node is used to define the tree.
+
 public abstract class Tree extends Dictionary {
         
     private Tree left, right;     // Children. Null if leaf node
-    private Tree parent;          // Parent pointer. Null if root node
+    private Tree parent;          // Parent pointer. Null for sentinel root node.
 
     public Tree() { 
-        super(0, 0, 0);
+        super(-1, -1, -1);
         this.left = null;
         this.right = null;
         this.parent = null;
@@ -34,13 +36,14 @@ public abstract class Tree extends Dictionary {
         // Returns false if e not found in the subtree.
         
     public abstract Tree Find(int k, boolean exact);
-        // Searches for the key k in the BST subtree. 
-
         // If exact is true, then performs and exact match and returns an element of the dictionary with key = k
         // and returns null if no such element exists.
 
         // If exact is false, performs an approximate search and
-        // returns the element with smallest key such that key >= k in the subtree.  Returns null in case no such element found.
+        // returns the element with SMALLEST key such that key >= k in the subtree.  Returns null in case no such element found.
+
+        // Can be used to implement the Best Split Fit strategy when called on sentinel node or root node with exact = false
+
 
     public abstract Tree getFirst(); 
     public abstract Tree getNext(); 
