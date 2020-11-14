@@ -18,16 +18,27 @@ In the case any argument is missing, console is used for input or output
 
 ## Format of test file
 
-number of test cases\\
-size\\
-number of commands\\
-command1\\
-command2
-...
-size (next test case)
+number of test cases
+
+size
+
 number of commands
+
 command1
+
 command2
+
 ...
+
+size (next test case)
+
+number of commands
+
+command1
+
+command2
+
+...
+
 
 One sample test file test.in is attached alongside
