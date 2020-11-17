@@ -1,4 +1,4 @@
-6
+7
 100
 3
 Allocate 10
@@ -58,3 +58,10 @@ Free 20
 Free 0
 Free 220
 Free 9120
+100
+5
+Allocate 10
+Allocate 10
+Free 0
+Allocate 20
+Allocate 10
