@@ -7,7 +7,7 @@ public class Driver{
         while(numTestCases-->0){
             int size;
             size = sc.nextInt();
-            A1DynamicMem obj = new A1DynamicMem(size);
+            A2DynamicMem obj = new A2DynamicMem(size);
             int numCommands = sc.nextInt();
             while(numCommands-->0) {
                 String command;
@@ -15,6 +15,7 @@ public class Driver{
                 int argument;
                 argument = sc.nextInt();
                 int result = -5;
+                boolean toPrint = true;
                 switch (command) {
                     case "Allocate":
                         result = obj.Allocate(argument);
@@ -22,10 +23,15 @@ public class Driver{
                     case "Free":
                         result = obj.Free(argument);
                         break;
+                    case "Defragment":
+                        obj.Defragment();
+                        toPrint = false;
+                        break;
                     default:
                         break;
                 }
-                System.out.println(result);
+                if(toPrint)
+                    System.out.println(result);
             }
             
         }
