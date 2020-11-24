@@ -48,6 +48,7 @@ One sample test file test.in is attached alongside
 ```Allocate Size```
 
 ```Free Address```
+```Defragment 0```
 
-This is the format for commands required
+This is the format for commands required, Defragment will always be called with 0 as the argument.
 
