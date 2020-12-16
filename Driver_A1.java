@@ -16,7 +16,7 @@ public class Driver{
         while(numTestCases-->0){
             int size;
             size = sc.nextInt();
-            A2DynamicMem obj = new A2DynamicMem(size);
+            A1DynamicMem obj = new A1DynamicMem(size);
             int numCommands = sc.nextInt();
             while(numCommands-->0) {
                 String command;
